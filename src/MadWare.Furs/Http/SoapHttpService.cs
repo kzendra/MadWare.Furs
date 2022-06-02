@@ -30,7 +30,7 @@ namespace MadWare.Furs.Http
 
         public async Task<string> SendRequest(string url, string payload, BaseRequestBody b)
         {
-            WebRequestHandler handler = new WebRequestHandler();
+            HttpClientHandler handler = new HttpClientHandler();
             handler.ClientCertificates.Add(this.cert);
 
             using (HttpClient client = new HttpClient(handler))
